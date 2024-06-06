@@ -27,7 +27,7 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Quantidade</mat-label>
-          <input matInput type="number" placeholder="Quantidade" formControlName="amount">
+          <input [readonly]="!this.registerForm.value.measure" matInput type="number" placeholder="Quantidade" formControlName="amount">
           <mat-icon matSuffix>filter_2</mat-icon>
         </mat-form-field>
       </div>
