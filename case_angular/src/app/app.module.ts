@@ -17,6 +17,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { CreateRegistrationComponent } from './create-registration/create-registration.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ListItemComponent } from './list-item/list-item.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
 
     MatToolbarModule,
     MatIconModule,

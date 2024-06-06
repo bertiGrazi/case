@@ -4,12 +4,12 @@
 
 
 <div class="registartion-form m-12 p-12">
-  <form action="">
+  <form action="" [formGroup]="registerForm">
     <div class="row">
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Nome do Item</mat-label>
-          <input matInput placeholder="Nome do Item">
+          <input matInput placeholder="Nome do Item" formControlName="nameItem">
           <mat-icon matSuffix>edit</mat-icon>
         </mat-form-field>
       </div>
@@ -17,7 +17,7 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Medida</mat-label>
-          <input matInput type="number" placeholder="Medida">
+          <input matInput type="number" placeholder="Medida" formControlName="measure">
           <mat-icon matSuffix>filter_1</mat-icon>
         </mat-form-field>
       </div>
@@ -25,7 +25,7 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Quantidade</mat-label>
-          <input matInput type="number" placeholder="Quantidade">
+          <input matInput type="number" placeholder="Quantidade" formControlName="amount">
           <mat-icon matSuffix>filter_2</mat-icon>
         </mat-form-field>
       </div>
@@ -33,21 +33,21 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Preço</mat-label>
-          <input matInput type="number" placeholder="Preço">
+          <input matInput type="number" placeholder="Preço" formControlName="price">
           <mat-icon matSuffix>number</mat-icon>
         </mat-form-field>
       </div>
 
       <div class="col-md-12 mb-40">
         <mat-label class="text-radio"><b>Produto Perecível:</b></mat-label>
-        <mat-radio-group aria-label="Produto Perecível:">
+        <mat-radio-group aria-label="Produto Perecível:" formControlName="product">
           <mat-radio-button value="Sim">Sim</mat-radio-button>
           <mat-radio-button value="Não">Não</mat-radio-button>
         </mat-radio-group>
       </div>
 
       <div class="col-md-6">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" formControlName="validity">
           <mat-label>Data de Validade</mat-label>
           <input matInput [matDatepicker]="picker1" formControlName="validity">
           <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="col-md-6">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" formControlName="fabrication">
           <mat-label>Data de Fabricação</mat-label>
           <input matInput [matDatepicker]="picker2" formControlName="fabrication">
           <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
