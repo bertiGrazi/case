@@ -16,14 +16,12 @@ export class CreateRegistrationComponent implements OnInit{
   public registerForm!: FormGroup 
 
   measures: Measure[] = [
-    {value: 'lt', viewValue: 'lt'},
-    {value: 'kg', viewValue: 'kg'},
-    {value: 'un', viewValue: 'un'}
+    {value: 'lt', viewValue: 'Litros'},
+    {value: 'kg', viewValue: 'Quilograma'},
+    {value: 'un', viewValue: 'Unidade'}
   ]
 
-  constructor(private fb: FormBuilder) {
-    
-  }
+  constructor(private fb: FormBuilder) {}
   
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -40,6 +38,4 @@ export class CreateRegistrationComponent implements OnInit{
   saveForm() {
     console.log(this.registerForm.value)
   }
-
-
 }
