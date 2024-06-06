@@ -16,9 +16,11 @@
 
       <div class="col-md-6">
         <mat-form-field appearance="outline">
-          <mat-label>Medida</mat-label>
-          <input matInput type="number" placeholder="Medida" formControlName="measure">
-          <mat-icon matSuffix>filter_1</mat-icon>
+          <mat-select placeholder="Unidade de Medida" formControlName="measure">
+            <ng-container *ngFor="let measure of measures">
+              <mat-option [value]="measure">{{ measure.viewValue }}</mat-option>
+            </ng-container>
+          </mat-select>
         </mat-form-field>
       </div>
 
@@ -66,7 +68,7 @@
 
     </div>
     <div class="container-button">
-      <button mat-raised-button color="accent" (click)="saveForm()">Salvar</button>
+      <button mat-raised-button color="primary" (click)="saveForm()">Salvar</button>
       <button mat-raised-button>Cancelar</button>
     </div>
   </form>
