@@ -47,7 +47,7 @@
       </div>
 
       <div class="col-md-6">
-        <mat-form-field appearance="outline" formControlName="validity">
+        <mat-form-field appearance="outline">
           <mat-label>Data de Validade</mat-label>
           <input matInput [matDatepicker]="picker1" formControlName="validity">
           <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="col-md-6">
-        <mat-form-field appearance="outline" formControlName="fabrication">
+        <mat-form-field appearance="outline">
           <mat-label>Data de Fabricação</mat-label>
           <input matInput [matDatepicker]="picker2" formControlName="fabrication">
           <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
@@ -64,6 +64,10 @@
         </mat-form-field>
       </div>
 
+    </div>
+    <div class="container-button">
+      <button mat-raised-button color="accent" (click)="saveForm()">Salvar</button>
+      <button mat-raised-button>Cancelar</button>
     </div>
   </form>
 </div>

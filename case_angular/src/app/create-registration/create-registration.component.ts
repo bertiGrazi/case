@@ -24,4 +24,8 @@ export class CreateRegistrationComponent implements OnInit{
       fabrication: '',
     })
   }
+
+  saveForm() {
+    console.log(this.registerForm.value)
+  }
 }
