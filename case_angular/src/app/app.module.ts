@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 import { CreateRegistrationComponent } from './create-registration/create-registration.component';
 import { ListItemComponent } from './list-item/list-item.component';
@@ -36,7 +37,8 @@ import { ListItemComponent } from './list-item/list-item.component';
     MatInputModule,
     MatRadioModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
