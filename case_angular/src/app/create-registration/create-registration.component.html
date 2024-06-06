@@ -1,9 +1,71 @@
-<div class="logo teste-center">
+<div class="logo text-center">
   <img width="300" src="./../../assets/svg/logo.svg" alt="Logo " />
 </div>
 
+
 <div class="registartion-form m-3 p-4">
   <form action="">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome do Item</mat-label>
+          <input matInput placeholder="Nome do Item">
+          <mat-icon matSuffix>edit</mat-icon>
+        </mat-form-field>
+      </div>
 
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Medida</mat-label>
+          <input matInput placeholder="Medida">
+          <mat-icon matSuffix>number</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Quantidade</mat-label>
+          <input matInput placeholder="Quantidade">
+          <mat-icon matSuffix>number</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Preço</mat-label>
+          <input matInput placeholder="Preço">
+          <mat-icon matSuffix>number</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-12">
+        <mat-radio-group aria-label="Select an option" formControlName="product">
+          <mat-label><b>Produto Perecível:</b></mat-label>
+          <mat-radio-button value="Sim">Sim</mat-radio-button>
+          <mat-radio-button value="Não">Não</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Validade</mat-label>
+          <input matInput [matDatepicker]="picker1" formControlName="validity">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Fabricação</mat-label>
+          <input matInput [matDatepicker]="picker2" formControlName="fabrication">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2 color="primary"></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+    </div>
   </form>
 </div>
